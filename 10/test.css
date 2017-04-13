@@ -1,0 +1,39 @@
+body{
+	background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492086293361&di=ab40afa251fa8cddc36e4e4d8ea99ab7&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fpic%2Fitem%2F99ee434e9258d1099e17bc55d158ccbf6e814d9e.jpg);
+       padding: 0;
+       margin: 0;
+}
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+	width: 0;
+	height:0;
+}
+#f{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+	
+}
+header,footer{
+	border:1px solid #fff;
+	margin: 1% 0;
+	height: 120px;
+	border:1px solid #fff;
+}
+aside,main{
+    border:1px solid #fff;
+}
+section,aside,main{
+	min-height: 500px;
+}
+aside{
+	width: 20%;
+	margin-right: 0.5%;
+	float: left;
+}
+main{
+	width: 79%;
+	float: right;
+}
