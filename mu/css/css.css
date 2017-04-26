@@ -1,0 +1,76 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+	width: 0;
+	height: 0;
+	font-size: 0;
+}
+body,ul{
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	margin-top: 20px;
+	background: orange;
+	font-size: 20px;
+  	text-align: center;
+  	height: 50px;
+  	line-height: 50px;
+  	box-shadow: 0px 2px 4px 0px rgba(0,0,0,.5);
+}
+.menu ul{
+	width: 606px;
+	margin: auto;
+	
+}
+.menu ul li{
+	float: left;
+	display: inline-block;
+	
+}
+.menu ul li a{
+	display: table;
+	width: 200px;
+	border-left: 1px solid rgba(0,0,0,.3);
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	text-indent: 10px;
+	transition: all .5s;
+	position: relative;
+}
+.menu ul li:last-child a{
+	border-right:1px solid rgba(0,0,0,.3) ;
+}
+.menu ul li a:hover{
+	color: #fff;
+}
+.menu ul li a i{
+	color: #fff;
+	transform: scale(0);
+	margin-left: -10px;
+	/*opacity: 0;*/
+	transition: all .5s; 
+}
+.menu ul li a:hover i{
+	margin-left:0px ;
+	transform: scale(1);
+	/*opacity: 1;*/
+}
+.menu ul li a::after{
+	content: "";
+	position: absolute;
+	left: 20%;
+	right: 10%;
+	top: 20%;
+	bottom:0;
+	border-radius: 100%;
+	background-color: #FFA500;
+    box-shadow: 0px 0px 10px 0 rgba(0,0,0,.3);
+    z-index: -1;
+	transition:all .6s;
+}
+.menu ul li  a:hover::after{
+	box-shadow: 0px 7px 10px 0 rgba(0,0,0,.7);
+}
