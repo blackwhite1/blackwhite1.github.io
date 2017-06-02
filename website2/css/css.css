@@ -23,6 +23,7 @@ a{
 .container{
 	max-width: 1200px;
 	margin: auto;
+	padding: 1px;
 }
 header{
 	width: 100%;
@@ -40,6 +41,10 @@ header.on{
 }
 header .logo{
 	float: left;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
 }
 header .logo img{
 	display: inline-block;
@@ -98,12 +103,40 @@ header .logo span{
     text-shadow: none;
 }
 /**/
-.section{
-	padding: 50px 0px;
-	line-height: 2;
-	min-height: 400px;
+section{
+    line-height: 1.5;	
+    padding: 50px 0;
 }
 .about{
 	
 }
-
+section h2{
+	text-align: center;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.about img{
+	width: 47%;
+	float: left;
+}
+.about .note{
+	width: 47%;
+	float: right;
+	line-height: 2;
+}
+.about .note ol{
+	list-style-type: none;
+	padding: 0;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+/*
+ */
+.service{
+	min-height: 800px;
+	background: url(../img/banner2.jpg) no-repeat center top;
+	background-size: cover;
+}
