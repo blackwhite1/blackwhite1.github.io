@@ -129,6 +129,28 @@ section h2+p{
 .about .note ol{
 	list-style-type: none;
 	padding: 0;
+	counter-reset: a ;
+}
+.about .note li{
+	counter-increment: a ;
+	position: relative;
+	cursor: pointer;
+}
+.about .note li::before{
+	content: counter(a);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 20px;
+   	transition: transform .5s;
+	
+}
+.about .note li:hover::before{
+	transform: translate(0.5em) ;
 }
 .about .note p:first-child{
 	margin-top: 0;
@@ -136,7 +158,38 @@ section h2+p{
 /*
  */
 .service{
-	min-height: 800px;
-	background: url(../img/banner2.jpg) no-repeat center top;
+	min-height: 600px;
+	background: url(../img/desktop.jpg) no-repeat center top;
 	background-size: cover;
+}
+.service::after{
+	box-shadow: 0px 0px 100px 50px rgba(0,0,0,.5);
+}
+.service ul li{
+	float: left;
+	width: 45%;
+	min-height: 150px;
+	margin-right: 50px;
+	text-align: right;
+	cursor: pointer;
+}
+.service ul li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+}
+.service ul li i{
+	float: right;
+	padding: 25px 0px 12px 20px;
+	transition: all .5s;
+}
+.service ul li:nth-child(2n) i{
+	float: left;
+	padding: 25px 20px 12px 0px;
+}
+.service ul li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
+}
+.service ul li h3{
+	display: inline-block;
 }
