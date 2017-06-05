@@ -1,0 +1,142 @@
+.clearfix::after{
+	clear: both;
+	display: block;
+	content: "";
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	min-height: 1200px;
+	font-family: "微软雅黑";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+/**/
+
+.container{
+	max-width: 1200px;
+	margin: auto;
+	padding: 1px;
+}
+header{
+	width: 100%;
+	padding: 12px;
+	background-color: rgba(0,0,0,.01);
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	transition: all .5s;
+}
+header.on{
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
+}
+header .logo{
+	float: left;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+}
+.banner{
+	min-height: 800px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.text{
+	color: #FFFFFF;
+	display: block;
+	position: absolute;
+	max-width: 800px;
+	height: 30px;
+	line-height: 30px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: 250px auto;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+} 
+.text h2{
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+.text h2 em{
+	color: #339BEB;
+	font-style: normal;
+}
+.text p em{
+	font-style: normal;
+	color: #000;
+	padding: 1px 1px;
+    background-color:rgba(255,255,255,.5);
+    text-shadow: none;
+}
+/**/
+section{
+    line-height: 1.5;	
+    padding: 50px 0;
+}
+.about{
+	
+}
+section h2{
+	text-align: center;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.about img{
+	width: 47%;
+	float: left;
+}
+.about .note{
+	width: 47%;
+	float: right;
+	line-height: 2;
+}
+.about .note ol{
+	list-style-type: none;
+	padding: 0;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+/*
+ */
+.service{
+	min-height: 800px;
+	background: url(../img/banner2.jpg) no-repeat center top;
+	background-size: cover;
+}
