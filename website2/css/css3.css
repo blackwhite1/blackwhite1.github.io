@@ -1,0 +1,258 @@
+.clearfix::after{
+	clear: both;
+	display: block;
+	content: "";
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	min-height: 1200px;
+	font-family: "微软雅黑";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+/*header*/
+
+.container{
+	max-width: 1200px;
+	margin: auto;
+	padding: 1px;
+}
+header{
+	width: 100%;
+	padding: 12px;
+	background-color: rgba(0,0,0,.01);
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	transition: all .5s;
+}
+header.on{
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.7);
+}
+header .logo{
+	float: left;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+}
+.banner{
+	min-height: 800px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.text{
+	color: #FFFFFF;
+	display: block;
+	position: absolute;
+	max-width: 800px;
+	height: 30px;
+	line-height: 30px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	margin: 250px auto;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+} 
+.text h2{
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+.text h2 em{
+	color: #339BEB;
+	font-style: normal;
+}
+.text p em{
+	font-style: normal;
+	color: #000;
+	padding: 1px 1px;
+    background-color:rgba(255,255,255,.5);
+    text-shadow: none;
+}
+/*about*/
+section{
+    line-height: 1.5;	
+    padding: 50px 0;
+}
+.about{
+	
+}
+section h2{
+	text-align: center;
+}
+section h2+p{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.about img{
+	width: 47%;
+	float: left;
+}
+.about .note{
+	width: 47%;
+	float: right;
+	line-height: 2;
+}
+.about .note ol{
+	list-style-type: none;
+	padding: 0;
+	counter-reset: a ;
+}
+.about .note li{
+	counter-increment: a ;
+	position: relative;
+	cursor: pointer;
+}
+.about .note li::before{
+	content: counter(a);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 20px;
+   	transition: transform .5s;
+	
+}
+.about .note li:hover::before{
+	transform: translate(0.5em) ;
+}
+.about .note p:first-child{
+	margin-top: 0;
+}
+/*service*/
+.service{
+	min-height: 600px;
+	background: url(../img/desktop.jpg) no-repeat center top;
+	background-size: cover;
+}
+.service::after{
+	box-shadow: 0px 0px 100px 50px rgba(0,0,0,.5);
+}
+.service ul li{
+	float: left;
+	width: 45%;
+	min-height: 150px;
+	margin-right: 50px;
+	text-align: right;
+	cursor: pointer;
+}
+.service ul li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+}
+.service ul li i{
+	float: right;
+	padding: 25px 0px 12px 20px;
+	transition: all .5s;
+}
+.service ul li:nth-child(2n) i{
+	float: left;
+	padding: 25px 20px 12px 0px;
+}
+.service ul li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
+}
+.service ul li h3{
+	display: inline-block;
+}
+/*case*/
+.case{
+	
+}
+.case h2+p{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.case figure{
+	margin: 5px calc(8%/3) 10px 0px;
+	float: left;
+	width: 23%;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.case figure:nth-child(4n){
+	margin: 0;
+}
+.case figure img{
+	width: 100%;
+	transition: transform .5s;
+}
+.case figure:hover img{
+	transform: scale(1.3) rotate(10deg);
+}
+.case figcaption{
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 50%;
+	bottom: 5%;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px;
+}
+.case figure figcaption .time{
+	background-color: #339BEB;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	position: absolute;
+}
+.case figure figcaption .time .month{
+	background-color: rgba(0,0,0,.4);
+}
+.case figure figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.case figure figcaption .date{
+	position: absolute;
+	left: 0;	
+	right: 0;
+	bottom: 0;
+	font-size: 0.8em;
+	text-align: right;
+	background-color: rgba(0,0,0,.1);
+}
+/*contact*/
+.contact{
+	min-height: 600px;
+	background: url(../img/android-1869510_1920.jpg) no-repeat center top;
+	background-size: cover;
+}
+
