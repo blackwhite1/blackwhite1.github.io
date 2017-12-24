@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/css.css" />
+	</head>
+
+	<body id="body">
+		<div class="menu">
+			<span class="color" style="background-color: #ffffff;border-radius:0 10px 0 0;">
+				<i class="fa fa-rotate-left"></i>
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color">
+			
+			</span>
+			<span class="color" style="border-radius:0 0 10px 0;">
+			
+			</span>
+		</div>
+		<div class="head">
+			<div class="box">
+				<img src="https://cdn-s3.si.com/s3fs-public/2014/06/09/brion_oconnor_400x400.png" alt="" style="width: 80%;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;">
+				<i class="p fa fa-facebook"></i>
+				<i class="p fa fa-twitter"></i>
+				<i class="p fa fa-github"></i>
+				<i class="p fa fa-google"></i>
+			</div>
+		</div>
+		<hr />
+		<h1 class="p">قم بتحديث الصفحة عند تغيير الالوان</h2>
+		<hr  />
+		<h3 class="p">by houcine atfli</h3>
+		<hr  />
+		<script type="text/javascript">
+			var body = document.querySelector('#body');
+			var oBox = document.querySelector('.box');
+			var oColor = document.querySelectorAll('.color');
+			var p = document.querySelectorAll('.p');
+			var rgb1 = new Array("#423939", "#003989", "#f5e88f", "#dc32a4", "#e2cdd6", "#b17b31", "#2c0757", "#74c1bb", "#f39b2f", "#ecc60d");
+			var rgb2 = new Array("#ffffff", "#f5e88f", "#dc32a4", "#e2cdd6", "#b17b31", "#2c0757", "#74c1bb", "#f39b2f", "#ecc60d", "#423939");
+			var i,j;
+			
+			oColor[0].addEventListener("click", function() {
+				body.style.backgroundColor = rgb2[0];
+				oBox.style.borderColor = rgb1[0];
+				for(j = 0; j < p.length; j++){
+					p[j].style.color = rgb1[0];	
+					p[j].style.backgroundColor = rgb2[0];
+				}
+			});
+			
+			for(i = 1; i < oColor.length; i++) {
+				oColor[i].style.backgroundColor = rgb1[i];
+				(function(i) {
+					oColor[i].addEventListener("click", function() {
+						body.style.backgroundColor = rgb2[i];
+						oBox.style.borderColor = rgb1[i];
+						for(var j = 0; j < p.length; j++){
+							p[j].style.color = rgb1[i];
+							p[j].style.backgroundColor = rgb2[i];
+						}
+					});
+				})(i)
+			}
+		</script>
+	</body>
+</html>
