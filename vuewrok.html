@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.clearfix::after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.tabs {}
+			
+			.tabs .items {}
+			
+			.tabs .items .item {
+				padding: 10px 30px;
+				float: left;
+				border-radius: 2px 2px 0px 0px;
+				margin: 0px 2px;
+				cursor: pointer;
+			}
+			
+			.tabContents .content {
+				width: 600px;
+				min-height: 300px;
+			}
+			
+			.tabs div div:nth-child(1) {
+				background-color: #fdd;
+			}
+			
+			.tabs div div:nth-child(2) {
+				background-color: #dfd;
+			}
+			
+			.tabs div div:nth-child(3) {
+				background-color: #ddf;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+			<div class="tabs" >				
+				<div class="items clearfix">
+					<div class="item" v-for="(item,index) in items" v-on:click="tabs(index)">{{item}}</div>
+				</div>
+				<div class="tabContents">
+					<div id="news" v-for="(item,index) in tabContents" class="content" v-show="num===index">{{item}}</div>
+				</div>			
+			</div>
+			<script type="text/javascript">
+				var app=new Vue({
+					el:".tabs",
+					data:{
+						items:['新闻','通知','公告'],
+						tabContents:['新闻内容','通知内容','公告内容'],
+						num:0,
+						
+					},
+					methods:{
+						tabs:function(index){
+							this.num=index;
+						}
+					}
+				});
+			</script>
+	</body>
+</html>
